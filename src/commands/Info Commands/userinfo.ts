@@ -47,7 +47,7 @@ export async function run (client: ReknownClient, message: Message, args: string
       VERIFIED_BOT: "<:verified_bot:858288062476189697>",
       DISCORD_CERTIFIED_MODERATOR: "<:certified_moderator:861713146459586592>",
     };
-    const userFlags = await user?.user.flags?.toArray();
+    const userFlags: any = await user?.user.flags?.toArray();
 
 
     const usernfo_embed: any = new MessageEmbed()
@@ -69,7 +69,7 @@ export async function run (client: ReknownClient, message: Message, args: string
       usernfo_embed.addField('Nitro Boost', 'No', true)
     }
 
-    if (userFlags?.length > 0) usernfo_embed.addField('Badges', userFlags.map(flag => flags[flag]).join(' '), true);
+    if (userFlags.length > 0) usernfo_embed.addField('Badges', userFlags.map((flag: string | number) => flags[flag]).join(' '), true);
 
 
     message.channel.send(usernfo_embed)

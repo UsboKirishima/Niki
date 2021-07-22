@@ -65,8 +65,8 @@ async function run(client, message, args) {
     if (!user.premiumSince) {
         usernfo_embed.addField('Nitro Boost', 'No', true);
     }
-    if ((userFlags === null || userFlags === void 0 ? void 0 : userFlags.length) > 0)
-        usernfo_embed.addField('Badges', userFlags.map(flag => flags[flag]).join(' '), true);
+    if (userFlags.length > 0)
+        usernfo_embed.addField('Badges', userFlags.map((flag) => flags[flag]).join(' '), true);
     message.channel.send(usernfo_embed);
 }
 exports.run = run;
