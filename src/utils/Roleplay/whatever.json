@@ -1,0 +1,14 @@
+{
+  "name": "whatever",
+  "description": "yua.commands.whatever.description",
+  "responses.self": "yua.commands.whatever.responses.self",
+  "counters.self": "yua.commands.whatever.counters.self",
+  "aliases": ["whatevs"],
+  "links": [
+    "https://media1.tenor.com/images/58de9f3c43b92e5f4cacc57714fd9fa5/tenor.gif?itemid=16216173",
+    "https://media1.tenor.com/images/b7d86a6e0263b11c2c5d03a75b142a91/tenor.gif?itemid=12082820",
+    "https://media1.tenor.com/images/f8f18722fa5167be464a56e06c94995e/tenor.gif?itemid=13840352",
+    "https://media1.tenor.com/images/122bdc1a38e4329089fc00ade65c283b/tenor.gif?itemid=5874451",
+    "https://media1.tenor.com/images/a93b32f8ce82323fa2054b9595f116f9/tenor.gif?itemid=12676321"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "bored",
+  "description": "yua.commands.bored.description",
+  "links": [
+    "https://media1.tenor.com/images/b353dcd4eb7b36ae6ce50e83824dc66e/tenor.gif?itemid=11579685",
+    "https://media1.tenor.com/images/2ed5a360a233ad45bf7ec122476c0fe4/tenor.gif?itemid=15916939",
+    "https://media1.tenor.com/images/a1d29d4e4181e563db8c07353ba90f6f/tenor.gif?itemid=13095377",
+    "https://media1.tenor.com/images/edd5474d03a0756e45c8c42c2be08043/tenor.gif?itemid=15496297",
+    "https://media1.tenor.com/images/fe42bcedb6118731aaf056e493556d3f/tenor.gif?itemid=4583775",
+    "https://media1.tenor.com/images/d63e9b62702a9c8ff079c5a289a2ec19/tenor.gif?itemid=12518589",
+    "https://media1.tenor.com/images/3687130d2490d4011c088e31ba38b4f4/tenor.gif?itemid=5897451",
+    "https://media1.tenor.com/images/da89d9a8aeb28fd73f0c8d17c675bd30/tenor.gif?itemid=15021625",
+    "https://media1.tenor.com/images/2771430a3bad24eae2a712ffe621a599/tenor.gif?itemid=17778357",
+    "https://media1.tenor.com/images/717ec8721e21b9e0f989a1e205e4b5ba/tenor.gif?itemid=15963940"
+  ],
+  "aliases": [],
+  "responses.self": "yua.commands.bored.responses.self",
+  "counters.self": "yua.commands.bored.counters.self"
+}

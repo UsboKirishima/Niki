@@ -1,0 +1,22 @@
+{
+  "name": "run",
+  "description": "yua.commands.run.description",
+  "links": [
+    "https://media1.tenor.com/images/d3863f076e4ede5ecf28a8d5681c983b/tenor.gif?itemid=17446198",
+    "https://media1.tenor.com/images/087628e72f9ac4d5aa752032813bd0c3/tenor.gif?itemid=12961969",
+    "https://media1.tenor.com/images/5e0f7a2a3aa1787b927b4f24d0dbccf3/tenor.gif?itemid=5308652",
+    "https://media1.tenor.com/images/98fbd44d2ee60c7e52dd32642331a3b5/tenor.gif?itemid=16641931",
+    "https://media1.tenor.com/images/c62a8b9e0d0643874d68d09bb2c1f859/tenor.gif?itemid=12546891",
+    "https://media1.tenor.com/images/af63e4ca8791ebc925a09df0470c549a/tenor.gif?itemid=20564597",
+    "https://media1.tenor.com/images/b3814ccbf0e6ac4914dd57b519b88445/tenor.gif?itemid=20564603",
+    "https://media1.tenor.com/images/63493fce8f736e65581584cb2a4a5ff9/tenor.gif?itemid=20564609",
+    "https://media1.tenor.com/images/764f64c9e0eba6c5c66a3ba86308f2cc/tenor.gif?itemid=20564612",
+    "https://media1.tenor.com/images/6baf592c779eb3bbfaa4177f2e0bb881/tenor.gif?itemid=20564629",
+    "https://media1.tenor.com/images/9ac169e01039e87ed38a11ee6acf8ed9/tenor.gif?itemid=14606585"
+  ],
+  "aliases": [],
+  "responses.self": "yua.commands.run.responses.self",
+  "responses.towards": "yua.commands.run.responses.towards",
+  "counters.self": "yua.commands.run.counters.self",
+  "counters.towards": "yua.commands.run.counters.towards"
+}

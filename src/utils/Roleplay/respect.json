@@ -1,0 +1,14 @@
+{
+  "name": "respect",
+  "description": "yua.commands.respect.description",
+  "links": [
+    "https://media1.tenor.com/images/f821ff1a4a904d03000e08ca657233a5/tenor.gif?itemid=5359089",
+    "https://media.giphy.com/media/3orif1xSQnwOkYIRjO/giphy.gif",
+    "https://media1.tenor.com/images/733e542fcdd51bb3d4404d888e7101e9/tenor.gif?itemid=14764178",
+    "https://media1.tenor.com/images/aa75abe1b58e755e263f31d02ea6a8e1/tenor.gif?itemid=17919585",
+    "https://media1.tenor.com/images/a6d6f759e824cd84e3fc8df537e2e7bc/tenor.gif?itemid=4519236"
+  ],
+  "aliases": [],
+  "responses.self": "yua.commands.respect.responses.self",
+  "counters.self": "yua.commands.respect.counters.self"
+}

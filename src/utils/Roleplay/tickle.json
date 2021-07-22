@@ -1,0 +1,21 @@
+{
+  "name": "tickle",
+  "description": "yua.commands.tickle.description",
+  "links": [
+    "https://media1.tenor.com/images/891894667f9def977be90cf8fc0594a4/tenor.gif?itemid=19915995",
+    "https://media1.tenor.com/images/fea79fed0168efcaf1ddfb14d8af1a6d/tenor.gif?itemid=7283507",
+    "https://media1.tenor.com/images/05a64a05e5501be2b1a5a734998ad2b2/tenor.gif?itemid=11379130",
+    "https://media1.tenor.com/images/9dc0ea3c8b017694ea73355591e08e66/tenor.gif?itemid=19658422",
+    "https://media1.tenor.com/images/e4513f4144f1b3dd51389c62a59b63ae/tenor.gif?itemid=15717559",
+    "https://media1.tenor.com/images/e3fcc810a9d46f85d46c8504d0e4840a/tenor.gif?itemid=13953997",
+    "https://media1.tenor.com/images/b1fc22bec9d5e8fed0c2269ef14824bf/tenor.gif?itemid=5235178",
+    "https://media1.tenor.com/images/d38554c6e23b86c81f8d4a3764b38912/tenor.gif?itemid=11379131",
+    "https://media1.tenor.com/images/02f62186ccb7fa8a2667f3216cfd7e13/tenor.gif?itemid=13269751",
+    "https://media1.tenor.com/images/c4106315d0889667a9befbc121747145/tenor.gif?itemid=20218947"
+  ],
+  "aliases": [],
+  "responses.towards": "yua.commands.tickle.responses.towards",
+  "responses.want": "yua.commands.tickle.responses.want",
+  "counters.towards": "yua.commands.tickle.counters.towards",
+  "counters.want": "yua.commands.tickle.counters.want"
+}

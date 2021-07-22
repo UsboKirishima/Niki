@@ -1,0 +1,22 @@
+{
+  "name": "stare",
+  "description": "yua.commands.stare.description",
+  "links": [
+    "https://media1.tenor.com/images/9dddeec219b430f00c1b2de5a4934d61/tenor.gif?itemid=16552689",
+    "https://media1.tenor.com/images/ad4684854b2b82d065aa5844033a79d1/tenor.gif?itemid=12003923",
+    "https://media1.tenor.com/images/97cd5f9ca2ac274356f4609d1aac1b40/tenor.gif?itemid=5630500",
+    "https://media1.tenor.com/images/9c78d4bcbf1b2bfc52efde64a341a8f8/tenor.gif?itemid=19236381",
+    "https://media1.tenor.com/images/a90449eb045d5d57d9159154e7316a9e/tenor.gif?itemid=17913844",
+    "https://media1.tenor.com/images/8dd689928dbc324298aae4399a937c1d/tenor.gif?itemid=20564926",
+    "https://media1.tenor.com/images/572bb5621796cb9b187cb84b66160777/tenor.gif?itemid=20564938",
+    "https://media1.tenor.com/images/efc4a0e260b20665b73f7520e1bb46eb/tenor.gif?itemid=20564948",
+    "https://media1.tenor.com/images/04bcbef0194f992c594c3dad76ef00dc/tenor.gif?itemid=20564954",
+    "https://media1.tenor.com/images/7665926b8492d1cae9a3709f5f4d8501/tenor.gif?itemid=5934174",
+    "https://i.nobuwu.dev/nyaa/stare/3.gif"
+  ],
+  "aliases": [],
+  "responses.self": "yua.commands.stare.responses.self",
+  "responses.towards": "yua.commands.stare.responses.towards",
+  "counters.self": "yua.commands.stare.counters.self",
+  "counters.towards": "yua.commands.stare.counters.towards"
+}

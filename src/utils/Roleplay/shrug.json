@@ -1,0 +1,19 @@
+{
+  "name": "shrug",
+  "description": "yua.commands.shrug.description",
+  "links": [
+    "https://media1.tenor.com/images/8bf3267e5f0a00eef84f9fbb6ac4ac1b/tenor.gif?itemid=13119038",
+    "https://media1.tenor.com/images/f168e0109defe801787890fe2a6104bc/tenor.gif?itemid=13951519",
+    "https://media1.tenor.com/images/fcfe6b2cc1126993cb0cdd491258a40d/tenor.gif?itemid=12286711",
+    "https://media1.tenor.com/images/539c646415cfa02b9eabdd55b32c8360/tenor.gif?itemid=14576522",
+    "https://media1.tenor.com/images/07ad4dff1580660dd009f041cdeac7be/tenor.gif?itemid=10759884",
+    "https://media1.tenor.com/images/2ddcf163952c9ed5b1a75698e0a79781/tenor.gif?itemid=20564694",
+    "https://media1.tenor.com/images/8721302195a5c0a38ed6763a2a57fbd8/tenor.gif?itemid=20564715",
+    "https://media1.tenor.com/images/ceea89d83cb0a133b02744770cc6d685/tenor.gif?itemid=20564718",
+    "https://media1.tenor.com/images/d424137fdf1c7a837b50cdd01c4ff3ed/tenor.gif?itemid=20564728",
+    "https://media1.tenor.com/images/499c7461ad922fe373f5d71b3ebdb826/tenor.gif?itemid=20564741"
+  ],
+  "aliases": [],
+  "responses.self": "yua.commands.shrug.responses.self",
+  "counters.self": "yua.commands.shrug.counters.self"
+}

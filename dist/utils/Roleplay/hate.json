@@ -1,0 +1,19 @@
+{
+    "name": "hate",
+    "description": "yua.commands.hate.description",
+    "links": [
+        "https://media1.tenor.com/images/980c1c3caf4942c966b8714d0e97328a/tenor.gif?itemid=21216811",
+        "https://media1.tenor.com/images/f97ffb0a4faa3d67780f843fd17a0d11/tenor.gif?itemid=21216834",
+        "https://media1.tenor.com/images/06ef17cbd539e821e070097ccd715ef3/tenor.gif?itemid=21216832",
+        "https://media1.tenor.com/images/4b61d0164ee5da8b4e8cf9aa96e3085d/tenor.gif?itemid=21216857",
+        "https://media1.tenor.com/images/09bbec34dc571cedc2ce5d56737a9f50/tenor.gif?itemid=21216878",
+        "https://media1.tenor.com/images/45136dd8cb39bfee08363480470b32dd/tenor.gif?itemid=21216912",
+        "https://media1.tenor.com/images/82122253537f4fa13528ffbac730c3d5/tenor.gif?itemid=21216930",
+        "https://media1.tenor.com/images/e5e0404cd249ab15790376e974968e52/tenor.gif?itemid=21216887"
+    ],
+    "aliases": [],
+    "responses.self": "yua.commands.hate.responses.self",
+    "responses.towards": "yua.commands.hate.responses.towards",
+    "counters.self": "yua.commands.hate.counters.self",
+    "counters.towards": "yua.commands.hate.counters.towards"
+}

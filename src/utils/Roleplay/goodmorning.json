@@ -1,0 +1,21 @@
+{
+  "name": "goodmorning",
+  "description": "yua.commands.goodmorning.description",
+  "links": [
+    "https://media1.tenor.com/images/11fdefc3cf323a47af3f665f018c2c77/tenor.gif?itemid=5634607",
+    "https://media1.tenor.com/images/8aaa6365f75ef28ac4764e8a73f417d1/tenor.gif?itemid=11800129",
+    "https://media1.tenor.com/images/12867253c66f18ce17121c716bd720e3/tenor.gif?itemid=7445458",
+    "https://media1.tenor.com/images/52bf1afef19876cdaec8906952254802/tenor.gif?itemid=12348565",
+    "https://media1.tenor.com/images/efb3c1fc454f0bd0c70cb3e3fc0f5e75/tenor.gif?itemid=13820235",
+    "https://media1.tenor.com/images/a35527737a7cea9a682257eab848ef9a/tenor.gif?itemid=5118522",
+    "https://media1.tenor.com/images/0a36f8dd96c3a61bd8926c3658920414/tenor.gif?itemid=16843917",
+    "https://media1.tenor.com/images/c9bdd59ad0a38e3700d6cbd50fe79d8c/tenor.gif?itemid=17322803",
+    "https://media1.tenor.com/images/d9b20916892ebd106b080711158c8735/tenor.gif?itemid=17666740",
+    "https://media1.tenor.com/images/8aaa6365f75ef28ac4764e8a73f417d1/tenor.gif?itemid=11800129"
+  ],
+  "aliases": [],
+  "responses.self": "yua.commands.goodmorning.responses.self",
+  "responses.towards": "yua.commands.goodmorning.responses.towards",
+  "counters.self": "yua.commands.goodmorning.counters.self",
+  "counters.towards": "yua.commands.goodmorning.counters.towards"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "vibe",
+  "description": "yua.commands.vibe.description",
+  "links": [
+    "https://media1.tenor.com/images/159e00d0ab8ce04bdda0b748f96b1e28/tenor.gif?itemid=19977171",
+    "https://media1.tenor.com/images/c66696f200c650ba93be7951a1e07c6b/tenor.gif?itemid=14493181",
+    "https://media1.tenor.com/images/dc192599f21f62c69dce09b8880d2b4b/tenor.gif?itemid=19654516",
+    "https://media1.tenor.com/images/b561d273e21a68e86abc0577eb14ec96/tenor.gif?itemid=16881642",
+    "https://media1.tenor.com/images/7b4df523f44fc8e5a1a7baa4e8cc6936/tenor.gif?itemid=8672739",
+    "https://media1.tenor.com/images/00a8449f677db99a47bb50aa07b99cc7/tenor.gif?itemid=19850360",
+    "https://media1.tenor.com/images/7889f5ec4032c6d2d37a3baf1168cfa1/tenor.gif?itemid=20101033",
+    "https://media1.tenor.com/images/b81bd17754ffa0a3b07fd8517c90c97e/tenor.gif?itemid=17702829",
+    "https://media1.tenor.com/images/272abd4e7feb723dac9c1a701e6a9fae/tenor.gif?itemid=19510658",
+    "https://media1.tenor.com/images/3ccaf5ee34855ba9e44e63968cdd528e/tenor.gif?itemid=20596277",
+    "https://i.kym-cdn.com/photos/images/original/000/023/397/wake-me-up-halo.gif",
+    "https://i.nobuwu.dev/nyaa/dance/33.gif",
+    "https://i.nobuwu.dev/nyaa/smile/12.gif",
+    "https://media1.tenor.com/images/22f9fb90f7007e8ffc6320a5647f0a20/tenor.gif?itemid=9802554"
+  ],
+  "aliases": [],
+  "responses.self": "yua.commands.vibe.responses.self",
+  "responses.towards": "yua.commands.vibe.responses.towards",
+  "counters.self": "yua.commands.vibe.counters.self",
+  "counters.towards": "yua.commands.vibe.counters.towards"
+}

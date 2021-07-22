@@ -1,0 +1,23 @@
+{
+  "name": "peck",
+  "description": "yua.commands.peck.description",
+  "links": [
+    "https://media1.tenor.com/images/85ae811b41326a6138677b4293d4c0d8/tenor.gif?itemid=10824318",
+    "https://media1.tenor.com/images/32d4f0642ebb373e3eb072b2b91e6064/tenor.gif?itemid=15150255",
+    "https://media1.tenor.com/images/503bb007a3c84b569153dcfaaf9df46a/tenor.gif?itemid=17382412",
+    "https://media1.tenor.com/images/1f425b6d1f5ce29c67e2e6c61e69c3b1/tenor.gif?itemid=17605286",
+    "https://media1.tenor.com/images/7de89bb0f49de7bb987f0c3908998cd6/tenor.gif?itemid=19827352",
+    "https://media1.tenor.com/images/c34d2e3f699471f30824c7419d4fb3bb/tenor.gif?itemid=20564462",
+    "https://media1.tenor.com/images/279c24b828664e7a1e8263a8e1e041a5/tenor.gif?itemid=20564472",
+    "https://media1.tenor.com/images/76472be0984031f989d1eebd217d28e5/tenor.gif?itemid=20564481",
+    "https://media1.tenor.com/images/99f500665f4bd3da97b1bdbf5040e86d/tenor.gif?itemid=20564541",
+    "https://media1.tenor.com/images/2a838aa7ad42305ddd65b3a73e33459f/tenor.gif?itemid=5390725",
+    "https://i.nobuwu.dev/nyaa/kiss/3.gif",
+    "https://i.nobuwu.dev/nyaa/kiss/8.gif"
+  ],
+  "aliases": [],
+  "responses.towards": "yua.commands.peck.responses.towards",
+  "responses.want": "yua.commands.peck.responses.want",
+  "counters.towards": "yua.commands.peck.counters.towards",
+  "counters.want": "yua.commands.peck.counters.want"
+}
