@@ -91,6 +91,17 @@ client.on('guildMemberAdd', member => {
 })
 
 
+client.on('guildMemberAdd', async member => {
+  let enable = db.get(`ar.${member.guild?.id}.enable`)
+  let role = db.get(`ar.${member.guild?.id}.role`)
+  if(enable == false || enable == undefined || enable == null) return;
+  if(member.user.bot) return;
+  let roles: any = member.guild.roles.cache.get(`${role}`);
+  if(!role) return;
+  return await member.roles.add(roles);
+})
+
+
 //MongoDb Gay
 
 

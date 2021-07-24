@@ -28,7 +28,7 @@ async function run(client, message, args) {
     if (!((_b = (_a = message.guild) === null || _a === void 0 ? void 0 : _a.me) === null || _b === void 0 ? void 0 : _b.hasPermission('MANAGE_CHANNELS')))
         return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} I can't use this commands, Please give me MANAGE_CHANNELS permission.`));
     if (!args.slice(1).join(" ")) {
-        let help = String.raw `
+        message.channel.send(new discord_js_1.MessageEmbed().setColor('RANDOM').setAuthor(message.guild.name).setDescription(`
 **COUNTER**
 
 Count members and bots
@@ -37,23 +37,22 @@ ________________________________________________
 
 *- All members*
 
-**counter + [allmembers] + [channel id/@]**
+\`counter + [allmembers] + [channel id/@]\`
 
 ________________________________________________
 
 *- Members*
 
-**counter + [members] + [channel id/@]**
+\`counter + [members] + [channel id/@]**\`
 
 ________________________________________________
 
 *- Bots*
 
-**counter + [bots] + [channel id/@]**
+\`**counter + [bots] + [channel id/@]**\`
 
 ________________________________________________
-`;
-        message.channel.send(new discord_js_1.MessageEmbed().setAuthor(message.guild.name).setDescription(help));
+`));
     }
     if (args[1] == 'allmembers') {
         if (!((_c = message.member) === null || _c === void 0 ? void 0 : _c.hasPermission('MANAGE_CHANNELS')))

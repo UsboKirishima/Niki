@@ -10,7 +10,8 @@ import * as db from 'quick.db';
 export async function run (client: ReknownClient, message: Message, args: string[]) {
   if(!message.guild?.me?.hasPermission('MANAGE_CHANNELS')) return await message.channel.send(new MessageEmbed().setDescription(`${error} I can't use this commands, Please give me MANAGE_CHANNELS permission.`))
     if(!args.slice(1).join(" ")) {
-      let help = String.raw`
+      
+message.channel.send(new MessageEmbed().setColor('RANDOM').setAuthor(message.guild.name).setDescription(`
 **COUNTER**
 
 Count members and bots
@@ -19,23 +20,22 @@ ________________________________________________
 
 *- All members*
 
-**counter + [allmembers] + [channel id/@]**
+\`counter + [allmembers] + [channel id/@]\`
 
 ________________________________________________
 
 *- Members*
 
-**counter + [members] + [channel id/@]**
+\`counter + [members] + [channel id/@]**\`
 
 ________________________________________________
 
 *- Bots*
 
-**counter + [bots] + [channel id/@]**
+\`**counter + [bots] + [channel id/@]**\`
 
 ________________________________________________
-`
-message.channel.send(new MessageEmbed().setAuthor(message.guild.name).setDescription(help))
+`))
     }
     if(args[1] == 'allmembers') {
       if(!message.member?.hasPermission('MANAGE_CHANNELS')) return await message.channel.send(new MessageEmbed().setDescription(`${error} You can't use this commands (Permissions: MANAGE_CHANNELS)`))

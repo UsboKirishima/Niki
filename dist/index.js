@@ -93,6 +93,19 @@ client.on('guildMemberAdd', member => {
         .replace(/{memberCount}/g, count);
     ChannelFind.send(mseg);
 });
+client.on('guildMemberAdd', async (member) => {
+    var _a, _b;
+    let enable = db.get(`ar.${(_a = member.guild) === null || _a === void 0 ? void 0 : _a.id}.enable`);
+    let role = db.get(`ar.${(_b = member.guild) === null || _b === void 0 ? void 0 : _b.id}.role`);
+    if (enable == false || enable == undefined || enable == null)
+        return;
+    if (member.user.bot)
+        return;
+    let roles = member.guild.roles.cache.get(`${role}`);
+    if (!role)
+        return;
+    return await member.roles.add(roles);
+});
 //MongoDb Gay
 client.login('ODU1MTc4OTczMDI4Njc5Njkw.YMutew.tUTTxchTvOdL6EoTTNaVi4vZZZ8');
 //client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.UGPF1-5Aj_3OvHd6eAI402xIGSg');
