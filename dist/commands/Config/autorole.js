@@ -24,7 +24,7 @@ const discord_js_1 = require("discord.js");
 const emojis_json_1 = require("../../utils/emojis.json");
 const db = __importStar(require("quick.db"));
 async function run(client, message, args) {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y;
     if (!args.slice(1).join(" ")) {
         let g = (_a = message.guild) === null || _a === void 0 ? void 0 : _a.iconURL({ dynamic: true });
         message.channel.send(new discord_js_1.MessageEmbed()
@@ -41,7 +41,7 @@ async function run(client, message, args) {
             `));
     }
     if (args[1].toLowerCase() == 'on') {
-        if ((_d = (_c = message.guild) === null || _c === void 0 ? void 0 : _c.me) === null || _d === void 0 ? void 0 : _d.hasPermission('MANAGE_CHANNELS'))
+        if (!((_d = (_c = message.guild) === null || _c === void 0 ? void 0 : _c.me) === null || _d === void 0 ? void 0 : _d.hasPermission('MANAGE_CHANNELS')))
             return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} I can't use this command.\n\nPermission required: MANAGE_CHANNELS.`));
         if (!((_e = message.member) === null || _e === void 0 ? void 0 : _e.hasPermission('MANAGE_GUILD')))
             return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} You can't use this command.\n\nPermissions: MANAGE_GUILD`));
@@ -51,7 +51,7 @@ async function run(client, message, args) {
         return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.tick} Auto role has been enabled.`));
     }
     if (args[1].toLowerCase() == 'off') {
-        if ((_j = (_h = message.guild) === null || _h === void 0 ? void 0 : _h.me) === null || _j === void 0 ? void 0 : _j.hasPermission('MANAGE_CHANNELS'))
+        if (!((_j = (_h = message.guild) === null || _h === void 0 ? void 0 : _h.me) === null || _j === void 0 ? void 0 : _j.hasPermission('MANAGE_CHANNELS')))
             return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} I can't use this command.\n\nPermission required: MANAGE_CHANNELS.`));
         if (!((_k = message.member) === null || _k === void 0 ? void 0 : _k.hasPermission('MANAGE_GUILD')))
             return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} You can't use this command.\n\nPermissions: MANAGE_GUILD`));
@@ -61,23 +61,25 @@ async function run(client, message, args) {
         return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.tick} Auto role has been disabled.`));
     }
     if (args[1].toLowerCase() == 'role') {
-        if ((_r = (_q = message.guild) === null || _q === void 0 ? void 0 : _q.me) === null || _r === void 0 ? void 0 : _r.hasPermission('MANAGE_CHANNELS'))
+        if (!((_r = (_q = message.guild) === null || _q === void 0 ? void 0 : _q.me) === null || _r === void 0 ? void 0 : _r.hasPermission('MANAGE_CHANNELS')))
             return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} I can't use this command.\n\nPermission required: MANAGE_CHANNELS.`));
         if (!((_s = message.member) === null || _s === void 0 ? void 0 : _s.hasPermission('MANAGE_GUILD')))
             return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} You can't use this command.\n\nPermissions: MANAGE_GUILD`));
+        if (db.get(`ar.${(_t = message.guild) === null || _t === void 0 ? void 0 : _t.id}.enable`) == false || db.get(`ar.${(_u = message.guild) === null || _u === void 0 ? void 0 : _u.id}.enable`) == undefined || db.get(`ar.${(_v = message.guild) === null || _v === void 0 ? void 0 : _v.id}.enable`) == null)
+            return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} Enable this command first!\n\nType \`autorole [ON]\` for enable this command.`));
         var role;
         if (!args.slice(1).join(" ")) {
-            return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} Invalid role.`));
+            message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} Invalid role.`));
         }
         else {
-            role = (_u = (_t = message.mentions.roles) === null || _t === void 0 ? void 0 : _t.first()) === null || _u === void 0 ? void 0 : _u.id;
+            role = (_w = message.mentions.roles) === null || _w === void 0 ? void 0 : _w.first();
             if (!role) {
-                role = (_w = (_v = message.guild) === null || _v === void 0 ? void 0 : _v.roles.cache.get(args[1])) === null || _w === void 0 ? void 0 : _w.id;
+                role = (_x = message.guild) === null || _x === void 0 ? void 0 : _x.roles.cache.get(args[1]);
             }
         }
         if (!role)
             return await message.channel.send(new discord_js_1.MessageEmbed().setDescription(`${emojis_json_1.error} Invalid role.`));
-        db.set(`ar.${(_x = message.guild) === null || _x === void 0 ? void 0 : _x.id}.role`, role);
+        db.set(`ar.${(_y = message.guild) === null || _y === void 0 ? void 0 : _y.id}.role`, role.id);
         return await message.channel.send(`${emojis_json_1.tick} The role has been set.`);
     }
 }

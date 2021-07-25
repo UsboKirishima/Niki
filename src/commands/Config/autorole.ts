@@ -26,37 +26,38 @@ export async function run (client: ReknownClient, message: Message, args: string
         )
     }
     if(args[1].toLowerCase() == 'on') {
-        if(message.guild?.me?.hasPermission('MANAGE_CHANNELS')) return await message.channel.send(new MessageEmbed().setDescription(`${error} I can't use this command.\n\nPermission required: MANAGE_CHANNELS.`))
+        if(!message.guild?.me?.hasPermission('MANAGE_CHANNELS')) return await message.channel.send(new MessageEmbed().setDescription(`${error} I can't use this command.\n\nPermission required: MANAGE_CHANNELS.`))
         if(!message.member?.hasPermission('MANAGE_GUILD')) return await message.channel.send(new MessageEmbed().setDescription(`${error} You can't use this command.\n\nPermissions: MANAGE_GUILD`))
         if(db.get(`ar.${message.guild?.id}.enable`) == true) return await message.channel.send(new MessageEmbed().setDescription(`${error} Auto role is already enabled.\n\nType \`autorole + [OFF]\` to disable.`))
         db.set(`ar.${message.guild?.id}.enable`, true)
         return await message.channel.send(new MessageEmbed().setDescription(`${tick} Auto role has been enabled.`))
     }
     if(args[1].toLowerCase() == 'off') {
-        if(message.guild?.me?.hasPermission('MANAGE_CHANNELS')) return await message.channel.send(new MessageEmbed().setDescription(`${error} I can't use this command.\n\nPermission required: MANAGE_CHANNELS.`))
+        if(!message.guild?.me?.hasPermission('MANAGE_CHANNELS')) return await message.channel.send(new MessageEmbed().setDescription(`${error} I can't use this command.\n\nPermission required: MANAGE_CHANNELS.`))
         if(!message.member?.hasPermission('MANAGE_GUILD')) return await message.channel.send(new MessageEmbed().setDescription(`${error} You can't use this command.\n\nPermissions: MANAGE_GUILD`))
         if(db.get(`ar.${message.guild?.id}.enable`) == false || db.get(`ar.${message.guild?.id}.enable`) == undefined || db.get(`ar.${message.guild?.id}.enable`) == null) return await message.channel.send(new MessageEmbed().setDescription(`${error} Auto role is already enabled.\n\nType \`autorole + [ON]\` to enable.`))
         db.delete(`ar.${message.guild?.id}.enable`)
         return await message.channel.send(new MessageEmbed().setDescription(`${tick} Auto role has been disabled.`))
     }
     if(args[1].toLowerCase() == 'role') {
-        if(message.guild?.me?.hasPermission('MANAGE_CHANNELS')) return await message.channel.send(new MessageEmbed().setDescription(`${error} I can't use this command.\n\nPermission required: MANAGE_CHANNELS.`))
+        if(!message.guild?.me?.hasPermission('MANAGE_CHANNELS')) return await message.channel.send(new MessageEmbed().setDescription(`${error} I can't use this command.\n\nPermission required: MANAGE_CHANNELS.`))
         if(!message.member?.hasPermission('MANAGE_GUILD')) return await message.channel.send(new MessageEmbed().setDescription(`${error} You can't use this command.\n\nPermissions: MANAGE_GUILD`))
-       
+        if(db.get(`ar.${message.guild?.id}.enable`) == false || db.get(`ar.${message.guild?.id}.enable`) == undefined || db.get(`ar.${message.guild?.id}.enable`) == null) return await message.channel.send(new MessageEmbed().setDescription(`${error} Enable this command first!\n\nType \`autorole [ON]\` for enable this command.`))
+        
         var role;
 
         if(!args.slice(1).join(" ")) {
-            return await message.channel.send(new MessageEmbed().setDescription(`${error} Invalid role.`))
+            message.channel.send(new MessageEmbed().setDescription(`${error} Invalid role.`))
         } else {
-          role = message.mentions.roles?.first()?.id
+          role = message.mentions.roles?.first()
           if(!role) {
-          role = message.guild?.roles.cache.get(args[1])?.id
+          role = message.guild?.roles.cache.get(args[1])
           }
         }
     
         if(!role) return await message.channel.send(new MessageEmbed().setDescription(`${error} Invalid role.`))
     
-        db.set(`ar.${message.guild?.id}.role`, role)
+        db.set(`ar.${message.guild?.id}.role`, role.id)
         return await message.channel.send(`${tick} The role has been set.`)
     }
 }
