@@ -19,13 +19,13 @@ export async function run (client: ReknownClient) {
     }
   }
 
-  const nodes = [{ id: '1', host: 'localhost', port: 2333, password: process.env.LAVALINK_PASS! }];
 
-  const details = {
-    guilds: client.guilds.cache.size,
-    users: client.users.cache.size,
-    channels: client.channels.cache.size
-  }
+/*
+    const guilds = client.guilds.cache.size
+    const users = client.users.cache.size
+    const channels = client.channels.cache.size
+    const uptime = require('ms')(client.uptime)
+
 
   //website
 
@@ -33,13 +33,13 @@ export async function run (client: ReknownClient) {
   
   const port = 3000 || 3001;
 
+  app.set('views', path.join(__dirname, '..', 'views'));
+  app.set('view engine', 'ejs');
+
   app.get("/", (req, res) => {
-    res.status(200).send(details)
+    res.render('index', { guilds, users, channels, uptime })
   })
 
-  app.get("/info", (req, res) => {
-    res.status(200).send(details)
-  })
 
-  app.listen(port)
+  app.listen(port)*/
 }

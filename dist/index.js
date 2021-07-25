@@ -59,16 +59,16 @@ Join in the support server [__***dsc.gg/MagicPoison***__](https://www.dsc.gg/mag
 **My info**
 
 - Owner: *usbo#9999*
-- OS: *Arch Linux*
+- OS: *Windows Server*
 - Version: *Beta*
 - Libraries: *Discord.js V13, discord-akairo v8.1*
-- Node: v14.16.0
-- Yarn: 1.22.10
-- Cpu: Intel® Core™ i5-9600K 4,90 GHz
-- Memory: 14,7Gb (16Gb RAM)
-- Ping: ${client.ws.ping}ms (WS Client)
-- Internet Upload: 13Mbit/s 
-:cherry_blossom:                              :cherry_blossom:
+- Node: *v14.16.0*
+- Yarn: *1.22.10*
+- Cpu: *Intel® Core™ i5-9600K 4,90 GHz*
+- Memory: *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB*
+- Ping: *${client.ws.ping}ms (WS Client)*
+- Uptime: *${require('ms')(client.uptime)}*
+:cherry_blossom::cherry_blossom::cherry_blossom:
 `));
         return;
     }
@@ -105,6 +105,22 @@ client.on('guildMemberAdd', async (member) => {
     if (!role)
         return;
     return await member.roles.add(roles);
+});
+client.on('guildMemberAdd', member => {
+    let usersDB = client.users.cache.size;
+    let channelsDB = client.channels.cache.size;
+    let guildsDB = client.guilds.cache.size;
+    db.set(`botstats.users`, usersDB);
+    db.set(`botstats.channels`, channelsDB);
+    db.set(`botstats.guilds`, guildsDB);
+});
+client.on('guildMemberRemove', member => {
+    let usersDB = client.users.cache.size;
+    let channelsDB = client.channels.cache.size;
+    let guildsDB = client.guilds.cache.size;
+    db.set(`botstats.users`, usersDB);
+    db.set(`botstats.channels`, channelsDB);
+    db.set(`botstats.guilds`, guildsDB);
 });
 //MongoDb Gay
 client.login('ODU1MTc4OTczMDI4Njc5Njkw.YMutew.tUTTxchTvOdL6EoTTNaVi4vZZZ8');

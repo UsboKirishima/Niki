@@ -32,11 +32,12 @@ export async function run (client: ReknownClient, message: Message, args: string
       role = message.guild?.roles.cache.get(args[1]) 
       }
     }
-
+    if(role.rawPosition >= message.guild.me.roles.highest.rawPosition) return await message.channel.send(new MessageEmbed().setDescription(`${error} I don't have access to this role`))
     if(!user) return await message.channel.send(new MessageEmbed().setDescription(`${error} Invalid role.`))
-    if(user.roles.cache.has(role.id)) return await message.channel.send(new MessageEmbed().setDescription(`${error} This user has already the role ${role.id}.`))
+    if (role.rawPosition >= message.member.roles.highest.rawPosition) return await message.channel.send(new MessageEmbed().setDescription(`${error} You don't have access to this role`))
+    if(user.roles.cache.has(`${role}`)) return await message.channel.send(new MessageEmbed().setDescription(`${error} This user has already the role ${role.id}.`))
 
-    user.roles.add(`${role.id}`)
+    user.roles.add(`${role}`)
     message.channel.send(new MessageEmbed().setDescription(`${tick} The role has been added to ${user.toString()}`))
     
 } 
