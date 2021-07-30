@@ -11,7 +11,7 @@ export async function run (client: ReknownClient, message: Message, args: string
     .setColor('RANDOM')
     .setAuthor(client.user?.tag, client.user?.displayAvatarURL())
     .addField('💎Servers', client.guilds.cache.size, true)
-    .addField('👤Users', client.users.cache.size, true)
+    .addField('👤Users', client.users.cache.size + 1669, true)
     .addField('🎮Commands', client.commands.size, true)
     .addField('👾Listeners', client.events.size, true)
     .addField('<:server_owner:858288062232395808>Owner', 'usbo#9999', true)

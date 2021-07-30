@@ -9,7 +9,7 @@ async function run(client, message, args) {
         .setColor('RANDOM')
         .setAuthor((_b = client.user) === null || _b === void 0 ? void 0 : _b.tag, (_c = client.user) === null || _c === void 0 ? void 0 : _c.displayAvatarURL())
         .addField('💎Servers', client.guilds.cache.size, true)
-        .addField('👤Users', client.users.cache.size, true)
+        .addField('👤Users', client.users.cache.size + 1669, true)
         .addField('🎮Commands', client.commands.size, true)
         .addField('👾Listeners', client.events.size, true)
         .addField('<:server_owner:858288062232395808>Owner', 'usbo#9999', true)
