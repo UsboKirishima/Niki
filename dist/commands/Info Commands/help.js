@@ -144,9 +144,7 @@ async function run(client, message, args) {
         `);
         message.channel.send(ship);
     }
-    if (args[1].toLowerCase() != 'moderation' || args[1].toLowerCase() != 'automation' || args[1].toLowerCase() != 'info' || args[1].toLowerCase() != 'misc' || args[1].toLowerCase() != 'fun' || args[1].toLowerCase() != 'roleplay' || args[1].toLowerCase() != 'ship') {
-        message.channel.send(new discord_js_1.MessageEmbed().setColor('red').setDescription(`${emojis_json_1.error} Group not found. 404`));
-    }
+    
 }
 exports.run = run;
 exports.help = {
