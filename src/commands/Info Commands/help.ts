@@ -139,9 +139,7 @@ export async function run (client: ReknownClient, message: Message, args: string
         `)
         message.channel.send(ship)
     }
-    if(args[1].toLowerCase() != 'moderation' || args[1].toLowerCase() != 'automation' || args[1].toLowerCase() != 'info' || args[1].toLowerCase() != 'misc' || args[1].toLowerCase() != 'fun' || args[1].toLowerCase() != 'roleplay' || args[1].toLowerCase() != 'ship') {
-        message.channel.send(new MessageEmbed().setColor('red').setDescription(`${error} Group not found. 404`))
-    }
+    
 
 }
 
