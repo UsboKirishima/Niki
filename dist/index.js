@@ -35,7 +35,7 @@ const client = new client_1.default({
     presence: {
         activity: {
             name: `${config_json_1.version}`,
-            type: 'PLAYING'
+            type: 'WATCHING'
         }
     }
 });
@@ -123,5 +123,5 @@ client.on('guildMemberRemove', member => {
     db.set(`botstats.guilds`, guildsDB);
 });
 //MongoDb Gay
-client.login('ODU1MTc4OTczMDI4Njc5Njkw.YMutew.k38Wlyv1KCGZHsaRx1cMV-mOB-s');
+client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.hTUXOIlA2Upwn2zloh3X6m6xfLs');
 //client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.UGPF1-5Aj_3OvHd6eAI402xIGSg');
