@@ -124,5 +124,5 @@ exports.client.on('guildMemberRemove', member => {
     db.set(`botstats.guilds`, guildsDB);
 });
 //MongoDb Gay
-exports.client.login('ODU1MTc4OTczMDI4Njc5Njkw.YMutew.k38Wlyv1KCGZHsaRx1cMV-mOB-s');
+exports.client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.hTUXOIlA2Upwn2zloh3X6m6xfLs');
 //client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.UGPF1-5Aj_3OvHd6eAI402xIGSg');
