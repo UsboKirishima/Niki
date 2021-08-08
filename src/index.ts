@@ -12,7 +12,7 @@ import * as db from 'quick.db'
 import mongoose from 'mongoose'
 
 
-const client = new ReknownClient({
+export const client = new ReknownClient({
   disableMentions: 'everyone',
   partials: [ 'GUILD_MEMBER', 'MESSAGE', 'REACTION', 'USER' ],
   presence: {
@@ -128,5 +128,5 @@ client.on('guildMemberRemove', member => {
 
 
 
-client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.hTUXOIlA2Upwn2zloh3X6m6xfLs');
+client.login('ODU1MTc4OTczMDI4Njc5Njkw.YMutew.k38Wlyv1KCGZHsaRx1cMV-mOB-s');
 //client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.UGPF1-5Aj_3OvHd6eAI402xIGSg');

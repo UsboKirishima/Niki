@@ -2,10 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.permissions = exports.memberPerms = exports.help = exports.run = void 0;
 const discord_js_1 = require("discord.js");
-const emojis_json_1 = require("../../utils/emojis.json");
 const prefix = 'nik ';
 async function run(client, message, args) {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t;
     if (!args.slice(1).join(" ")) {
         let categories = new discord_js_1.MessageEmbed()
             .setColor('#94c5e3')
@@ -17,8 +16,12 @@ async function run(client, message, args) {
             .addField('🎉Misc', '9 commands.', true)
             .addField('😂Fun', '3 commands.', true)
             .addField('🐱‍🏍Roleplay', '40 commands.', true)
-            .addField('💞Ship', '1 commands.', true);
-        message.channel.send(categories);
+            .addField('💞Ship', '1 commands.', true)
+            .addField('⚔️ Together', '1 commands.', true)
+            .addField('\u200b', '\u200b', true);
+        message.channel.send(categories).then(async () => {
+            message.channel.send("<:new1:873874917815357440><:new2:873874973750599720> Together commands out now!");
+        });
     }
     else if (args[1].toLowerCase() == 'moderation') {
         let moderation = new discord_js_1.MessageEmbed()
@@ -144,7 +147,17 @@ async function run(client, message, args) {
         `);
         message.channel.send(ship);
     }
-    
+    else if (args[1].toLowerCase() == 'together') {
+        let ship = new discord_js_1.MessageEmbed()
+            .setAuthor(`${(_s = client.user) === null || _s === void 0 ? void 0 : _s.username}'s commands.`, (_t = client.user) === null || _t === void 0 ? void 0 : _t.displayAvatarURL())
+            .setColor('#94c5e3')
+            .setDescription(`
+        \`${prefix}together\` :: Watch youtube & Play games.
+
+        -- Type \`${prefix} together help\` for all options.
+        `);
+        message.channel.send(ship);
+    }
 }
 exports.run = run;
 exports.help = {

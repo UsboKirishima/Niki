@@ -23,13 +23,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.client = void 0;
 const client_1 = __importDefault(require("./structures/client"));
 //require("discord-buttons")(ReknownClient)
 const fs_1 = require("fs");
 const config_json_1 = require("./config.json");
 const discord_js_1 = require("discord.js");
 const db = __importStar(require("quick.db"));
-const client = new client_1.default({
+exports.client = new client_1.default({
     disableMentions: 'everyone',
     partials: ['GUILD_MEMBER', 'MESSAGE', 'REACTION', 'USER'],
     presence: {
@@ -40,15 +41,15 @@ const client = new client_1.default({
     }
 });
 const eventList = fs_1.readdirSync('./dist/events');
-eventList.forEach(f => client.events.set(f.slice(0, -3), require(`./events/${f}`)));
-client.events.forEach((obj, name) => client.on(name, (...args) => obj.run(client, ...args)));
+eventList.forEach(f => exports.client.events.set(f.slice(0, -3), require(`./events/${f}`)));
+exports.client.events.forEach((obj, name) => exports.client.on(name, (...args) => obj.run(exports.client, ...args)));
 process.on('unhandledRejection', console.log);
-client.on('message', async (message) => {
+exports.client.on('message', async (message) => {
     var _a, _b, _c, _d;
-    if (message.content == `<@${(_a = client.user) === null || _a === void 0 ? void 0 : _a.id}>` || message.content == `<@!${(_b = client.user) === null || _b === void 0 ? void 0 : _b.id}>`) {
+    if (message.content == `<@${(_a = exports.client.user) === null || _a === void 0 ? void 0 : _a.id}>` || message.content == `<@!${(_b = exports.client.user) === null || _b === void 0 ? void 0 : _b.id}>`) {
         message.channel.send(new discord_js_1.MessageEmbed()
             .setColor('RANDOM')
-            .setAuthor('Niki', (_c = client.user) === null || _c === void 0 ? void 0 : _c.displayAvatarURL({ format: 'png' }))
+            .setAuthor('Niki', (_c = exports.client.user) === null || _c === void 0 ? void 0 : _c.displayAvatarURL({ format: 'png' }))
             .setDescription(`
 Hello ${(_d = message.guild) === null || _d === void 0 ? void 0 : _d.name}!
 I'm Niki, a discord bot made in Typescript - Online 24/7
@@ -66,14 +67,14 @@ Join in the support server [__***dsc.gg/MagicPoison***__](https://www.dsc.gg/mag
 - Yarn: *1.22.10*
 - Cpu: *Intel® Core™ i5-9600K 4,90 GHz*
 - Memory: *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB*
-- Ping: *${client.ws.ping}ms (WS Client)*
-- Uptime: *${require('ms')(client.uptime)}*
+- Ping: *${exports.client.ws.ping}ms (WS Client)*
+- Uptime: *${require('ms')(exports.client.uptime)}*
 :cherry_blossom::cherry_blossom::cherry_blossom:
 `));
         return;
     }
 });
-client.on('guildMemberAdd', member => {
+exports.client.on('guildMemberAdd', member => {
     var _a, _b, _c, _d;
     let enable = db.get(`welcome.${(_a = member.guild) === null || _a === void 0 ? void 0 : _a.id}.enable`);
     let channel = db.get(`welcome.${(_b = member.guild) === null || _b === void 0 ? void 0 : _b.id}.channel`);
@@ -93,7 +94,7 @@ client.on('guildMemberAdd', member => {
         .replace(/{memberCount}/g, count);
     ChannelFind.send(mseg);
 });
-client.on('guildMemberAdd', async (member) => {
+exports.client.on('guildMemberAdd', async (member) => {
     var _a, _b;
     let enable = db.get(`ar.${(_a = member.guild) === null || _a === void 0 ? void 0 : _a.id}.enable`);
     let role = db.get(`ar.${(_b = member.guild) === null || _b === void 0 ? void 0 : _b.id}.role`);
@@ -106,22 +107,22 @@ client.on('guildMemberAdd', async (member) => {
         return;
     return await member.roles.add(roles);
 });
-client.on('guildMemberAdd', member => {
-    let usersDB = client.users.cache.size;
-    let channelsDB = client.channels.cache.size;
-    let guildsDB = client.guilds.cache.size;
+exports.client.on('guildMemberAdd', member => {
+    let usersDB = exports.client.users.cache.size;
+    let channelsDB = exports.client.channels.cache.size;
+    let guildsDB = exports.client.guilds.cache.size;
     db.set(`botstats.users`, usersDB);
     db.set(`botstats.channels`, channelsDB);
     db.set(`botstats.guilds`, guildsDB);
 });
-client.on('guildMemberRemove', member => {
-    let usersDB = client.users.cache.size;
-    let channelsDB = client.channels.cache.size;
-    let guildsDB = client.guilds.cache.size;
+exports.client.on('guildMemberRemove', member => {
+    let usersDB = exports.client.users.cache.size;
+    let channelsDB = exports.client.channels.cache.size;
+    let guildsDB = exports.client.guilds.cache.size;
     db.set(`botstats.users`, usersDB);
     db.set(`botstats.channels`, channelsDB);
     db.set(`botstats.guilds`, guildsDB);
 });
 //MongoDb Gay
-client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.hTUXOIlA2Upwn2zloh3X6m6xfLs');
+exports.client.login('ODU1MTc4OTczMDI4Njc5Njkw.YMutew.k38Wlyv1KCGZHsaRx1cMV-mOB-s');
 //client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.UGPF1-5Aj_3OvHd6eAI402xIGSg');

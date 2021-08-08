@@ -19,8 +19,12 @@ export async function run (client: ReknownClient, message: Message, args: string
             .addField('😂Fun', '3 commands.', true)
             .addField('🐱‍🏍Roleplay', '40 commands.', true)
             .addField('💞Ship', '1 commands.', true)
+            .addField('⚔️ Together', '1 commands.', true)
+            .addField('\u200b', '\u200b', true)
 
-        message.channel.send(categories)
+        message.channel.send(categories).then(async () => {
+            message.channel.send("<:new1:873874917815357440><:new2:873874973750599720> Together commands out now!")
+        })
     } else if(args[1].toLowerCase() == 'moderation') {
         let moderation = new MessageEmbed()
         .setAuthor(`${client.user?.username}'s commands.`, client.user?.displayAvatarURL())
@@ -136,6 +140,16 @@ export async function run (client: ReknownClient, message: Message, args: string
         .setColor('#94c5e3')
         .setDescription(`
         \`${prefix}ship\` :: Shows the love between two people.
+        `)
+        message.channel.send(ship)
+    } else if(args[1].toLowerCase() == 'together') {
+        let ship = new MessageEmbed()
+        .setAuthor(`${client.user?.username}'s commands.`, client.user?.displayAvatarURL())
+        .setColor('#94c5e3')
+        .setDescription(`
+        \`${prefix}together\` :: Watch youtube & Play games.
+
+        -- Type \`${prefix} together help\` for all options.
         `)
         message.channel.send(ship)
     }
