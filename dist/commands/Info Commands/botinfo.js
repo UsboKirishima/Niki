@@ -13,7 +13,7 @@ async function run(client, message, args) {
         .addField('🎮 Commands', client.commands.size, true)
         .addField('👾 Listeners', client.events.size, true)
         .addField('<:server_owner:858288062232395808> Owner', 'usbo#9999', true)
-        .addField('📁 Version', '1.0', true)
+        .addField('📁 Version', '1.2.0', true)
         .addField('<:ts:851791992535253022> Language', 'Typescript', true)
         .addField('🐱 Wrappers', 'discord.js@v12, discord-akairo', true)
         .setThumbnail(gg)
