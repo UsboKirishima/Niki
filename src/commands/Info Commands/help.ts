@@ -22,9 +22,7 @@ export async function run (client: ReknownClient, message: Message, args: string
             .addField('⚔️ Together', '1 commands.', true)
             .addField('\u200b', '\u200b', true)
 
-        message.channel.send(categories).then(async () => {
-            message.channel.send("<:new1:873874917815357440><:new2:873874973750599720> Together commands out now!")
-        })
+        message.channel.send(categories)
     } else if(args[1].toLowerCase() == 'moderation') {
         let moderation = new MessageEmbed()
         .setAuthor(`${client.user?.username}'s commands.`, client.user?.displayAvatarURL())
