@@ -19,9 +19,7 @@ async function run(client, message, args) {
             .addField('💞Ship', '1 commands.', true)
             .addField('⚔️ Together', '1 commands.', true)
             .addField('\u200b', '\u200b', true);
-        message.channel.send(categories).then(async () => {
-            message.channel.send("<:new1:873874917815357440><:new2:873874973750599720> Together commands out now!");
-        });
+        message.channel.send(categories)
     }
     else if (args[1].toLowerCase() == 'moderation') {
         let moderation = new discord_js_1.MessageEmbed()
