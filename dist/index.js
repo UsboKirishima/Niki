@@ -47,7 +47,7 @@ process.on('unhandledRejection', console.log);
 exports.client.on('message', async (message) => {
     var _a, _b, _c, _d;
     if (message.content == `<@${(_a = exports.client.user) === null || _a === void 0 ? void 0 : _a.id}>` || message.content == `<@!${(_b = exports.client.user) === null || _b === void 0 ? void 0 : _b.id}>`) {
-        message.channel.send('**Niki has ended its service. Learn more here: https://discord.gg/yKFZArAyY9**');
+        message.channel.send('**Niki has ended its service. Learn more here: <https://discord.gg/yKFZArAyY9>**');
  
         /*message.channel.send(new discord_js_1.MessageEmbed()
             .setColor('RANDOM')
