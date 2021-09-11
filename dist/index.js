@@ -35,7 +35,7 @@ exports.client = new client_1.default({
     partials: ['GUILD_MEMBER', 'MESSAGE', 'REACTION', 'USER'],
     presence: {
         activity: {
-            name: `${config_json_1.version}`,
+            name: `GoodBye`,
             type: 'WATCHING'
         }
     }
