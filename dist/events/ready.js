@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.run = void 0;
 async function run(client) {
     console.log(`Successfully logged in as ${client.user.tag} (${client.user.id}).`);
+    client.user.setStatus('idle');
     for (const emoji in client.config.emojis) {
         if (Object.prototype.hasOwnProperty.call(client.config.emojis, emoji)) {
             client.emotes.set(emoji, client.emojis.cache.get(client.config.emojis[emoji]));
