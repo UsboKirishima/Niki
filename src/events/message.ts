@@ -18,6 +18,7 @@ export async function run (client: ReknownClient, message: Message) {
   if (!message.content.toLowerCase().startsWith(prefix) && !message.content.match(regexp) || message.content.toLowerCase() === prefix) return;
   
   
+  
 
   let str: string;
   if (message.content.match(regexp)) str = message.content.slice(message.content.match(regexp)![0].length);
@@ -43,7 +44,8 @@ export async function run (client: ReknownClient, message: Message) {
   } else if (!message.channel.permissionsFor(message.member!)!.has(cmdInfo.memberPerms)) return client.functions.noPerms(message, cmdInfo.memberPerms, message.channel);
   else if (!message.channel.permissionsFor(client.user!)!.has(cmdInfo.permissions)) return client.functions.noClientPerms(message, cmdInfo.permissions, message.channel);
   else if (cmdInfo.help.private && message.author.id !== client.config.ownerID) return;
-  cmdInfo.run(client, message, args);
+  message.channel.send('**Niki has ended its service. Learn more here: https://discord.gg/yKFZArAyY9**');
+  //cmdInfo.run(client, message, args);
 
 
   
