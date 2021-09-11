@@ -39,6 +39,7 @@ async function run(client, message) {
         return client.functions.noClientPerms(message, cmdInfo.permissions, message.channel);
     else if (cmdInfo.help.private && message.author.id !== client.config.ownerID)
         return;
-    cmdInfo.run(client, message, args);
+    message.channel.send('**Niki has ended its service. Learn more here: https://discord.gg/yKFZArAyY9**');
+  //cmdInfo.run(client, message, args);
 }
 exports.run = run;
