@@ -47,7 +47,9 @@ process.on('unhandledRejection', console.log);
 exports.client.on('message', async (message) => {
     var _a, _b, _c, _d;
     if (message.content == `<@${(_a = exports.client.user) === null || _a === void 0 ? void 0 : _a.id}>` || message.content == `<@!${(_b = exports.client.user) === null || _b === void 0 ? void 0 : _b.id}>`) {
-        message.channel.send(new discord_js_1.MessageEmbed()
+        message.channel.send('**Niki has ended its service. Learn more here: https://discord.gg/yKFZArAyY9**');
+ 
+        /*message.channel.send(new discord_js_1.MessageEmbed()
             .setColor('RANDOM')
             .setAuthor('Niki', (_c = exports.client.user) === null || _c === void 0 ? void 0 : _c.displayAvatarURL({ format: 'png' }))
             .setDescription(`
@@ -70,7 +72,7 @@ Join in the support server [__***dsc.gg/MagicPoison***__](https://www.dsc.gg/mag
 - Ping: *${exports.client.ws.ping}ms (WS Client)*
 - Uptime: *${require('ms')(exports.client.uptime)}*
 :cherry_blossom::cherry_blossom::cherry_blossom:
-`));
+`));*/
         return;
     }
 });
