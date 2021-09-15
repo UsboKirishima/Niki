@@ -128,5 +128,4 @@ client.on('guildMemberRemove', member => {
 
 
 
-client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.hTUXOIlA2Upwn2zloh3X6m6xfLs');
-//client.login('ODQ4NjE2NTA5NzY1MTg5NjQy.YLPNtg.UGPF1-5Aj_3OvHd6eAI402xIGSg');
+client.login('token');
