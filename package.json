@@ -10,7 +10,7 @@
     "@types/express": "^4.17.13",
     "@types/node-fetch": "^3.0.3",
     "canvas": "^2.8.0",
-    "dateformat": "^4.5.1",
+    "dateformat": "^5.0.1",
     "discord-reply": "^0.1.2",
     "discord-together": "^1.1.53",
     "discord.js": "^13.1.0",
