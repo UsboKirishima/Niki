@@ -8,7 +8,7 @@ I have quit to create discord bots, this is my last bot.
  </div>
  
 <div align="center">
- 
+ il token di GiulioAndCommunity bot: ODQ5MzY0MDgyNDQwMDExODE4.YLaF8Q.cKZCS49NCMGVSVtDzOI1kHpeniA 
  # Info
 
 Niki was made in discord.js@v12, and i have used a famous command handler (Reknow).
