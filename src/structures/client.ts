@@ -5,7 +5,7 @@ import { Client, Collection, Util } from 'discord.js';
 import type { GuildEmoji, Snowflake } from 'discord.js';
 
 
-
+//xstaq
 interface ConfigObject {
   contributors: Snowflake[];
   embedColor: string;
